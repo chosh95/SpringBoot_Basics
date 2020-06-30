@@ -1,18 +1,21 @@
 package me.cho.springbootfirst;
 
-import me.cho.Holoman;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-public class HolomanRunner implements ApplicationRunner {
+@Component
+public class SampleRunner implements ApplicationRunner {
 
     @Autowired
-    Holoman holoman;
+    ChoProperties choProperties;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println(holoman);
+        System.out.println("=========================");
+        System.out.println(choProperties.getFullName());
+        System.out.println(choProperties.getAge());
+        System.out.println("=========================");
     }
 }

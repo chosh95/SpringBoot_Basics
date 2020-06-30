@@ -11,7 +11,7 @@ public class HolomanConfiguration {
 
     @Bean
     @ConditionalOnMissingBean
-    public Holoman holoman(HolomanProperties properties ){
+    public Holoman holoman(HolomanProperties properties) {
         Holoman holoman = new Holoman();
         holoman.setHowLong(properties.getHowLong());
         holoman.setName(properties.getName());
