@@ -25,7 +25,7 @@ public class SampleControllerTest {
     public void hello() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/hello"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("hello cho"))
+                .andExpect(content().string("Hey cho"))
                 .andDo(print());
     }
 

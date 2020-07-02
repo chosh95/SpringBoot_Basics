@@ -2,8 +2,6 @@ package me.cho.demospringmvc.user;
 
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.PostConstruct;
-
 @RestController // 메소드 반환에 @Responsebody 생략
 public class UserController {
 
@@ -17,4 +15,9 @@ public class UserController {
         return user;
     }
 
+    @CrossOrigin(origins = "http://localhost:18080")
+    @GetMapping("/cors")
+    public String cors(){
+        return "cors";
+    }
 }
